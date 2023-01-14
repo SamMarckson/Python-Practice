@@ -20,14 +20,14 @@ def cakes(recipe, available):
     listaDivInteira = []
     disponivel = {}
 
-    if len(recipe) > len(available):        #CASO EM QUE HÁ INGREDIENTES FALTANDO PARA REALIZAR A RECEITA
+    if len(recipe) > len(available):        
         return 0
 
-    for k in recipe.keys():                 #CASO EM QUE NÃO HÁ DISPONÍVEL UM INGREDIENTE REQUISITADO NA RECEITA
+    for k in recipe.keys():                 
         if k not in available:
             return 0
 
-    for k, v in available.items():          #MATCH ENTRE DISPONIVEL E RECEITA
+    for k, v in available.items():         
         if k in recipe:
             disponivel[k] = v
 
